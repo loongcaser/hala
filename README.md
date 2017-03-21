@@ -2,7 +2,6 @@
 >  本项目是基于vue的移动端项目
 
 ## 技术架构
-***
 *  es6
 *  vue-cli
 *  vue
@@ -11,7 +10,6 @@
 *  vuex
 *  sass
 *  webpack
-*  vue-svg-icon
 
 ## Build Setup
 
