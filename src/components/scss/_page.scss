@@ -1,0 +1,62 @@
+@import "variables";
+
+.page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $default-page-bg;
+  overflow: hidden;
+
+  &.has-navbar {
+    .page-content {
+      padding-top: $header-height;
+    }
+
+    &.padding-top {
+      padding-top: $header-height + 10px;
+    }
+  }
+
+  &.has-tabbar {
+    .page-content {
+      margin-bottom: 44px;
+    }
+  }
+}
+
+/* page content */
+.page .page-content,
+.modal .page-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: auto;
+  height: auto;
+
+  background-color: $default-page-bg;
+
+  // Safari -webkit-overflow-scrolling bug
+  // 解决滑动几次后可滚动区域卡住不能再滑动的问题
+  -webkit-overflow-scrolling: touch;
+  z-index: 1;
+
+  &.no-scrolling {
+    -webkit-overflow-scrolling: auto;
+  }
+
+  &.padding-top {
+    padding-top: 54px;
+  }
+}
+
+.modal .page-content {
+  padding-top: 44px;
+}

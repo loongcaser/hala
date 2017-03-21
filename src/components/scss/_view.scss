@@ -1,0 +1,78 @@
+@import "variables";
+@import "mixin";
+
+@mixin view-right() {
+  @include translate3d(100%, 0, 0);
+}
+
+@mixin view-left() {
+  @include translate3d(-33%, 0, 0);
+}
+
+.page-enter-active,
+.page-leave-active,
+.grade-a .page-enter-active,
+.grade-a .page-leave-active
+{
+  @include transition-duration($ios-transition-duration);
+  @include transition-timing-function($ios-transition-timing-function);
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+}
+
+.grade-b .page-enter-active,
+.grade-b .page-leave-active
+{
+  @include transition-duration($android-transition-duration);
+  @include transition-timing-function($android-transition-timing-function);
+}
+
+.page-enter-to, .page-leave-to {
+  @include translate3d(0,0,0);
+}
+
+[transition-direction="forward"] {
+  .page-enter {
+    @include view-right();
+    z-index: 2;
+    opacity: 1;
+  }
+  .page-enter-to {
+    @include translate3d(0,0,0);
+    z-index: 1;
+    opacity: 1;
+  }
+  .page-leave {
+    @include translate3d(0,0,0);
+    z-index: 1;
+    opacity: 1;
+  }
+  .page-leave-to {
+    @include view-left();
+    z-index: 1;
+    opacity: 0.8;
+  }
+}
+
+[transition-direction="back"] {
+  .page-enter {
+    @include view-left();
+    z-index: 1;
+    opacity: 1;
+  }
+  .page-enter-to {
+    @include translate3d(0,0,0);
+    z-index: 1;
+    opacity: 1;
+  }
+  .page-leave {
+    @include translate3d(0,0,0);
+    z-index: 2;
+    opacity: 1;
+  }
+  .page-leave-to {
+    @include view-right();
+    z-index: 2;
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,35 @@
+-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1; /*初始状态 透明度为0*/
+    }
+    50% {
+        opacity: 0.75; /*中间状态 透明度为0*/
+    }
+    75% {
+        opacity: 0.5; /*中间状态 透明度为0*/
+    }
+    100% {
+        opacity: 0; /*结尾状态 透明度为1*/
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1; /*初始状态 透明度为0*/
+    }
+    50% {
+        opacity: 0.75; /*中间状态 透明度为0*/
+    }
+    75% {
+        opacity: 0.5; /*中间状态 透明度为0*/
+    }
+    100% {
+        opacity: 0; /*结尾状态 透明度为1*/
+    }
+}
+.opacity-bg{
+    /*background-color: rgba(255,255,255,0.2);*/
+    -webkit-animation-name: fadeOut; /*动画名称*/
+    -webkit-animation-duration: 3s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-delay: 0s; /*延迟时间*/
+}
