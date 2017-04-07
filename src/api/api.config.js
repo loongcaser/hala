@@ -2,7 +2,7 @@ import Vue from 'vue';
 import axios from 'axios'
 import {MsgType} from './constants';
 import router from '../../app/common/router/router';
-import Store from 'common/store';
+import Store from '../../app/common/store';
 axios.defaults.timeout = 10000;
 axios.defaults.credentials = false;
 
@@ -37,7 +37,7 @@ const genPath = (path) => {
 
 // 请求拦截
 axios.interceptors.request.use((config ) => {
-    if (Store.state.isLogin) {  // 判断是否存在token，如果存在的话，则每个http header都加上token
+    if (!Store.state.login.isLogin) {  // 判断是否存在token，如果存在的话，则每个http header都加上token
         config.url = genPath(config.url);
         config.headers.Authorization = `token ${Store.state.isLogin}`;
     }
