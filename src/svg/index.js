@@ -1,11 +1,3 @@
 import Vue from 'vue';
 import Icon from 'vue-svg-icon/Icon.vue';
 Vue.component('icon', Icon);
-Icon.inject('chameleon');
-Icon.inject('users');
-Icon.inject('refresh');
-Icon.inject('folder-open-o');
-Icon.inject('home2');
-Icon.inject('tasks');
-Icon.inject('shopping-bag');
-Icon.inject('circle-up');

@@ -15,7 +15,7 @@ import Cascade from './cascade';
 import Scalable from './scalable';
 
 //引入svg
-import '../svg';
+//import '../svg';
 
 Vue.component(Header.name, Header);
 Vue.component(Menu.name, Menu);
