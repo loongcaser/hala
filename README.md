@@ -17,7 +17,7 @@
 本地调试启动：
 
 # install dependencies
-第一步：npm install
+第一步：yarn install
 
 # serve with hot reload at localhost:8088
 第二步：npm run dev
