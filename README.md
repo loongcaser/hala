@@ -13,8 +13,8 @@
 
 ## Build Setup
 
-``` bash
-本地调试启动：
+
+## guide
 
 # install dependencies
 first step：yarn install
