@@ -12,11 +12,15 @@
 *  webpack
 
 ## Build Setup
+``` bash
 # install dependencies
-first step：yarn install
+yarn install
 
-# serve with hot reload at localhost:8088
-second step：npm run dev
+# serve with hot reload at localhost:8080
+npm run dev
 
 # build for production with minification
-third step: npm run build
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
